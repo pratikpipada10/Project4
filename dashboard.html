@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Revenue Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #info {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .info-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            width: 200px;
+        }
+
+        canvas {
+            display: block;
+            margin: 20px auto;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <div class="info-box">
+            <h3>Total Revenue</h3>
+            <p>$1,000,000</p>
+        </div>
+        <div class="info-box">
+            <h3>Total Average Jobs</h3>
+            <p>500</p>
+        </div>
+        <div class="info-box">
+            <h3>Tickets Created</h3>
+            <p>1000</p>
+        </div>
+        <div class="info-box">
+            <h3>Outstanding Amount</h3>
+            <p>$50,000</p>
+        </div>
+        <div class="info-box">
+            <h3>Memberships Sold</h3>
+            <p>200</p>
+        </div>
+        <div class="info-box">
+            <h3>Jobs Completed</h3>
+            <p>800</p>
+        </div>
+    </div>
+
+    <canvas id="barChartJob" width="600" height="400"></canvas>
+    <canvas id="barChartLocation" width="600" height="400"></canvas>
+
+    <script>
+        // Sample data for the charts
+        var dataByJob = {
+            labels: ['Job Type A', 'Job Type B', 'Job Type C', 'Job Type D'],
+            datasets: [{
+                label: 'Revenue by Job Type',
+                data: [5000, 8000, 12000, 6000],
+                backgroundColor: ['#ffcc99', '#c2f0c2', '#ffb3e6', '#99ff99'],
+                borderWidth: 1
+            }]
+        };
+
+        var dataByLocation = {
+            labels: ['Location X', 'Location Y', 'Location Z', 'Location W'],
+            datasets: [{
+                label: 'Revenue by Location Type',
+                data: [7000, 4000, 10000, 8000],
+                backgroundColor: ['#ffcc99', '#c2f0c2', '#ffb3e6', '#99ff99'],
+                borderWidth: 1
+            }]
+        };
+
+        // Create bar chart for revenue by job type
+        var barChartJob = new Chart(document.getElementById('barChartJob'), {
+            type: 'bar',
+            data: dataByJob,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Create bar chart for revenue by location type
+        var barChartLocation = new Chart(document.getElementById('barChartLocation'), {
+            type: 'bar',
+            data: dataByLocation,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

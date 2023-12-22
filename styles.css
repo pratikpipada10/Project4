@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+}
+
+.background-container {
+    background-color: #111; /* Main background color */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer-container {
+    background-color: #222; /* Darker background color for outer container */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    color: #fff; /* Text color */
+    text-align: center;
+    width: 60%; /* Adjust the width as needed */
+    max-width: 500px; /* Add a max-width for responsiveness */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.innermost-container {
+    background-color: #000; /* Black background color for innermost container */
+    padding: 70px; /* Decreased padding */
+    border-radius: 12px;
+}
+
+.large-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+    background-color: #000; /* Dark black background color for logo */
+     /* Add padding for spacing */
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.large-text {
+    font-size: 32px;
+}
+
+.green-text {
+    color: #4caf50; /* Green color */
+}
+
+.white-text {
+    color: #fff; /* White color */
+}
+
+.cylindrical-braces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.large-input {
+    width: 70%;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.larger-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 330px;
+}
+
+.larger-button:hover {
+    background-color: #45a049;
+}
+
+
+
+#username{
+
+  width: 300px;
+}
+#password{
+
+  width: 300px;
+}
+.forget-password {
+    margin-top: 15px;
+}
+
+.forget-link {
+
+    padding: 8px;
+    border-radius: 4px;
+
+    color:white; /* Black text color */
+}
